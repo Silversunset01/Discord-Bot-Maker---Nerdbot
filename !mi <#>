@@ -1,0 +1,1 @@
+{"name":"!mi","permissions":"NONE","restriction":"0","actions":[{"info":"0","infoIndex":"1","storage":"1","varName":"km","name":"Store Command Params"},{"channel":"0","varName":"","message":"${tempVars(\"km\")}km = ${Math.round(tempVars(\"km\") / 1.6)}miles","storage":"0","varName2":"","name":"Send Message"}]}
