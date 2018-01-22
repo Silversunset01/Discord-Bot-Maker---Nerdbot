@@ -1,0 +1,1 @@
+{"name":".clearchannel","permissions":"ADMINISTRATOR","restriction":"1","actions":[{"channel":"0","count":"100","condition":"0","custom":"","varName":"","name":"Delete Bulk Messages"},{"storage":"0","varName":"","name":"Delete Message"}]}
