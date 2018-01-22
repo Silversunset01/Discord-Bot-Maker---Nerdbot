@@ -1,0 +1,1 @@
+{"name":"!f","permissions":"NONE","restriction":"0","actions":[{"info":"0","infoIndex":"1","storage":"1","varName":"tempc","name":"Store Command Params"},{"channel":"0","varName":"","message":"${tempVars(\"tempc\")}°C = ${Math.round((tempVars(\"tempc\") * 1.8) + 32)}°F","storage":"0","varName2":"","name":"Send Message"}]}
