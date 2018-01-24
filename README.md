@@ -14,4 +14,4 @@ Command|Description
 [!roll <#>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/!roll%20%3C%23%3E) | Returns a random number between 1 and <input>, must be numeric and less than 10,000
 [+role <name>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/%2Brole%20%3Cname%3E) | Allows the user to self-assign a role
 [-role <name>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/-role%20%3Cname%3E) | Allows the user to self-remove a role
-[.clearchannel](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/.clearchannel) | Allows a user with admin permissions to clear any channel where the bot has the "manage permissions" role
+[.clearchannel](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/.clearchannel) | Allows a user with admin permissions to clear any channel where the bot has the "manage messages" role
