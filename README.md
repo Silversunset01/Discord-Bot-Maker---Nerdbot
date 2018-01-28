@@ -11,6 +11,7 @@ Command|Description
 [!km <#>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/!km%20%3C%23%3E) | Converts distance entered from Miles to Kilometers
 [!mi <#>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/!mi%20%3C%23%3E) | Converts distance entered from Kilometers to Miles
 [!roles	](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/!roles) | Loops through server role list, creates a list of all roles, removes roles unable to be assigned via bot command, sorts the resulting list alphabetically, and displays a message in chat.
+[!roleinfo](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/!roleinfo) | Displays all users in a requested role
 [!roll <#>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/!roll%20%3C%23%3E) | Returns a random number between 1 and <input>, must be numeric and less than 10,000
 [+role <name>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/%2Brole%20%3Cname%3E) | Allows the user to self-assign a role
 [-role <name>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/-role%20%3Cname%3E) | Allows the user to self-remove a role
