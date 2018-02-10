@@ -16,3 +16,4 @@ Command|Description
 [+role <name>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/%2Brole%20%3Cname%3E) | Allows the user to self-assign a role
 [-role <name>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/-role%20%3Cname%3E) | Allows the user to self-remove a role
 [.clearchannel](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/.clearchannel) | Allows a user with admin permissions to clear any channel where the bot has the "manage messages" role
+[!mcstatus](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/!mcstatus)|Displays players online for nerd servers
