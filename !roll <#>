@@ -1,1 +1,62 @@
-{"name":"!roll","permissions":"NONE","restriction":"0","actions":[{"info":"0","infoIndex":"1","storage":"1","varName":"rollnum","name":"Store Command Params"},{"storage":"1","varName":"rollnum","comparison":"4","value":"10000","iftrue":"2","iftrueVal":"3","iffalse":"2","iffalseVal":"5","name":"Check Variable"},{"channel":"0","varName":"","message":"I am sorry ${member}, I can only count to 10,000.","storage":"0","varName2":"","name":"Send Message"},{"name":"End Action Sequence"},{"storage":"1","varName":"rollval","min":"1","max":"${tempVars(\"rollnum\")}","name":"Generate Random Number"},{"storage":"1","varName":"rollval","comparison":"0","iftrue":"2","iftrueVal":"9","iffalse":"2","iffalseVal":"7","name":"Check Variable Type"},{"channel":"0","varName":"","message":"I am sorry ${member}, you must roll a number. ","storage":"0","varName2":"","name":"Send Message"},{"name":"End Action Sequence"},{"channel":"0","varName":"","message":"${member} has rolled a ${tempVars(\"rollval\")}","storage":"0","varName2":"","name":"Send Message"}]}
+{
+    "name": "!roll",
+    "permissions": "NONE",
+    "restriction": "0",
+    "actions": [{
+        "info": "0",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "rollnum",
+        "name": "Store Command Params"
+    }, {
+        "storage": "1",
+        "varName": "rollnum",
+        "comparison": "4",
+        "value": "10000",
+        "iftrue": "2",
+        "iftrueVal": "3",
+        "iffalse": "2",
+        "iffalseVal": "5",
+        "name": "Check Variable"
+    }, {
+        "channel": "0",
+        "varName": "",
+        "message": "I am sorry ${member}, I can only count to 10,000.",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+    }, {
+        "name": "End Action Sequence"
+    }, {
+        "storage": "1",
+        "varName": "rollval",
+        "min": "1",
+        "max": "${tempVars(\"rollnum\")}",
+        "name": "Generate Random Number"
+    }, {
+        "storage": "1",
+        "varName": "rollval",
+        "comparison": "0",
+        "iftrue": "2",
+        "iftrueVal": "9",
+        "iffalse": "2",
+        "iffalseVal": "7",
+        "name": "Check Variable Type"
+    }, {
+        "channel": "0",
+        "varName": "",
+        "message": "I am sorry ${member}, you must roll a number. ",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+    }, {
+        "name": "End Action Sequence"
+    }, {
+        "channel": "0",
+        "varName": "",
+        "message": "${member} has rolled a ${tempVars(\"rollval\")}",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+    }]
+}
