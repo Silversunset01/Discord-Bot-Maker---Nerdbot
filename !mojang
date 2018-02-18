@@ -1,0 +1,161 @@
+=================================[ Event ]=================================
+{
+    "name": "mojang_servers",
+    "temp": "60",
+    "event-type": "3",
+    "actions": [{
+        "behavior": "0",
+        "interpretation": "1",
+        "code": "new Date().getTime();\n",
+        "storage": "2",
+        "varName": "mc_starttime",
+        "name": "Run Script"
+    }, {
+        "behavior": "0",
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://status.mojang.com/check",
+        "path": "",
+        "storage": "2",
+        "varName": "mojang_status",
+        "name": "Store Json From WebAPI"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "mojang_status",
+        "path": "$.[0].*",
+        "storage": "2",
+        "varName": "mojang_minecraftnet",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "mojang_status",
+        "path": "$.[2].*",
+        "storage": "2",
+        "varName": "mojang_accountminecraftnet",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "mojang_status",
+        "path": "$.[3].*",
+        "storage": "2",
+        "varName": "mojang_authmojangcom",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "mojang_status",
+        "path": "$.[4].*",
+        "storage": "2",
+        "varName": "mojang_skinsminecraftnet",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "mojang_status",
+        "path": "$.[6].*",
+        "storage": "2",
+        "varName": "mojang_sessionservermojangcom",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "mojang_status",
+        "path": "$.[7].*",
+        "storage": "2",
+        "varName": "mojang_apimojangcom",
+        "name": "Parse From Stored Json"
+    }]
+}
+
+
+=================================[ Command ]=================================
+{
+    "name": "!mojang",
+    "permissions": "NONE",
+    "restriction": "0",
+    "actions": [{
+        "server": "0",
+        "varName": "",
+        "storage": "1",
+        "varName2": "bot_member",
+        "name": "Get Bot as Member"
+    }, {
+        "behavior": "0",
+        "interpretation": "1",
+        "code": "new Date().getTime()\n",
+        "storage": "1",
+        "varName": "mc_currenttime",
+        "name": "Run Script"
+    }, {
+        "member": "2",
+        "varName": "bot_member",
+        "info": "16",
+        "storage": "1",
+        "varName2": "bot_avatar",
+        "name": "Store Member Info"
+    }, {
+        "member": "2",
+        "varName": "bot_member",
+        "info": "3",
+        "storage": "1",
+        "varName2": "bot_name",
+        "name": "Store Member Info"
+    }, {
+        "member": "2",
+        "varName": "bot_member",
+        "info": "4",
+        "storage": "1",
+        "varName2": "bot_color",
+        "name": "Store Member Info"
+    }, {
+        "member": "1",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "author_avatar",
+        "name": "Store Member Info"
+    }, {
+        "member": "1",
+        "varName": "",
+        "info": "3",
+        "storage": "1",
+        "varName2": "author_name",
+        "name": "Store Member Info"
+    }, {
+        "title": "",
+        "author": "${tempVars(\"bot_name\")} | !mojang",
+        "color": "${tempVars(\"bot_color\")}",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "${tempVars(\"bot_avatar\")}",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "name": "Create Embed Message"
+    }, {
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "fieldName": "Last tested:",
+        "message": " ${Math.round((tempVars(\"mc_currenttime\") - serverVars(\"mc_starttime\")) / 1000,0)} seconds ago",
+        "inline": "1",
+        "name": "Add Embed Field"
+    }, {
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "fieldName": "Minecraft Server Status:",
+        "message": "**Minecraft.net:** ${((serverVars(\"mojang_minecraftnet\") == \"green\") ? \"All is well!\" : \"Something may be broken!\")}\n**Mojang accounts website:** ${((serverVars(\"mojang_accountminecraftnet\") == \"green\") ? \"All is well!\" : \"Something may be broken!\")}\n**Authentication Service:** ${((serverVars(\"mojang_authmojangcom\") == \"green\") ? \"All is well!\" : \"Something may be broken!\")}\n**Multiplayer session service:** ${((serverVars(\"mojang_sessionservermojangcom\") == \"green\") ? \"All is well!\" : \"Something may be broken!\")}\n**Minecraft Skins:** ${((serverVars(\"mojang_skinsminecraftnet\") == \"green\") ? \"All is well!\" : \"Something may be broken!\")}\n**Public API:** ${((serverVars(\"mojang_apimojangcom\") == \"green\") ? \"All is well!\" : \"Something may be broken!\")}\n\n[Click here](https://help.mojang.com/) for the mojang help page!",
+        "inline": "1",
+        "name": "Add Embed Field"
+    }, {
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "message": "${tempVars(\"author_name\")} ",
+        "footerIcon": "${tempVars(\"author_avatar\")}",
+        "name": "Set Embed Footer"
+    }, {
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "channel": "0",
+        "varName2": "",
+        "name": "Send Embed Message"
+    }]
+}
