@@ -1,4 +1,154 @@
-### Command: 
-{"name":"!roles","permissions":"NONE","restriction":"1","actions":[{"storage":"1","varName":"rolelist","name":"Create List"},{"storage":"1","varName":"staffroles","name":"Create List"},{"source":"1","list":"2","varName":"","tempVarName":"roleloop","type":"false","name":"Loop Through List"},{"behavior":"0","interpretation":"0","code":"var tosort = tempVars(\"rolelist\")\ntosort.sort()","storage":"1","varName":"rolelistsorted","name":"Run Script"},{"list":"7","varName":"rolelistsorted","start":"- ","middle":"","end":"\\n","storage":"1","varName2":"rolelisttransform","name":"Convert List to Text"},{"channel":"0","varName":"","message":"**The roles you are currently allowed to choose from are:**\n${tempVars(\"rolelisttransform\")}\n**To add a role type** `+role <name> `\n**To remove a role type** `-role <name>`\n*make sure to use the case-sensitive item from above!*","storage":"0","varName2":"","name":"Send Message"}]}
-### Event:
-{"name":"getroleinfo","temp":"","event-type":"0","actions":[{"role":"3","varName":"roleloop","info":"2","storage":"1","varName2":"roleloopname","name":"Store Role Info"},{"storage":"1","varName":"roleloopname","comparison":"1","value":"\"Head Admin\"","iftrue":"2","iftrueVal":"11","iffalse":"0","iffalseVal":"10","name":"Check Variable"},{"storage":"1","varName":"roleloopname","comparison":"1","value":"\"CAdmin\"","iftrue":"2","iftrueVal":"11","iffalse":"0","iffalseVal":"10","name":"Check Variable"},{"storage":"1","varName":"roleloopname","comparison":"1","value":"\"PAdmin\"","iftrue":"2","iftrueVal":"11","iffalse":"0","iffalseVal":"10","name":"Check Variable"},{"storage":"1","varName":"roleloopname","comparison":"1","value":"\"Tech Admin\"","iftrue":"2","iftrueVal":"11","iffalse":"0","iffalseVal":"10","name":"Check Variable"},{"storage":"1","varName":"roleloopname","comparison":"1","value":"\"Moderator\"","iftrue":"2","iftrueVal":"11","iffalse":"0","iffalseVal":"10","name":"Check Variable"},{"storage":"1","varName":"roleloopname","comparison":"1","value":"\"Nerdbot\"","iftrue":"2","iftrueVal":"11","iffalse":"0","iffalseVal":"10","name":"Check Variable"},{"storage":"1","varName":"roleloopname","comparison":"1","value":"\"Past Staff\"","iftrue":"2","iftrueVal":"11","iffalse":"0","iffalseVal":"","name":"Check Variable"},{"storage":"1","varName":"roleloopname","comparison":"1","value":"\"@everyone\"","iftrue":"2","iftrueVal":"11","iffalse":"2","iffalseVal":"10","name":"Check Variable"},{"storage":"1","varName":"rolelist","addType":"0","position":"","value":"tempVars(\"roleloopname\")","name":"Add Item to List"},{"storage":"1","varName":"staffroles","addType":"0","position":"","value":"tempVars(\"roleloopname\")","name":"Add Item to List"}]}
+===========================================[ Event ]===========================================
+{
+    "name": "getroleinfo",
+    "temp": "",
+    "event-type": "0",
+    "actions": [{
+        "role": "3",
+        "varName": "roleloop",
+        "info": "2",
+        "storage": "1",
+        "varName2": "roleloopname",
+        "name": "Store Role Info"
+    }, {
+        "storage": "1",
+        "varName": "roleloopname",
+        "comparison": "1",
+        "value": "\"Head Admin\"",
+        "iftrue": "2",
+        "iftrueVal": "11",
+        "iffalse": "0",
+        "iffalseVal": "10",
+        "name": "Check Variable"
+    }, {
+        "storage": "1",
+        "varName": "roleloopname",
+        "comparison": "1",
+        "value": "\"CAdmin\"",
+        "iftrue": "2",
+        "iftrueVal": "11",
+        "iffalse": "0",
+        "iffalseVal": "10",
+        "name": "Check Variable"
+    }, {
+        "storage": "1",
+        "varName": "roleloopname",
+        "comparison": "1",
+        "value": "\"PAdmin\"",
+        "iftrue": "2",
+        "iftrueVal": "11",
+        "iffalse": "0",
+        "iffalseVal": "10",
+        "name": "Check Variable"
+    }, {
+        "storage": "1",
+        "varName": "roleloopname",
+        "comparison": "1",
+        "value": "\"Tech Admin\"",
+        "iftrue": "2",
+        "iftrueVal": "11",
+        "iffalse": "0",
+        "iffalseVal": "10",
+        "name": "Check Variable"
+    }, {
+        "storage": "1",
+        "varName": "roleloopname",
+        "comparison": "1",
+        "value": "\"Moderator\"",
+        "iftrue": "2",
+        "iftrueVal": "11",
+        "iffalse": "0",
+        "iffalseVal": "10",
+        "name": "Check Variable"
+    }, {
+        "storage": "1",
+        "varName": "roleloopname",
+        "comparison": "1",
+        "value": "\"Nerdbot\"",
+        "iftrue": "2",
+        "iftrueVal": "11",
+        "iffalse": "0",
+        "iffalseVal": "10",
+        "name": "Check Variable"
+    }, {
+        "storage": "1",
+        "varName": "roleloopname",
+        "comparison": "1",
+        "value": "\"Past Staff\"",
+        "iftrue": "2",
+        "iftrueVal": "11",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Variable"
+    }, {
+        "storage": "1",
+        "varName": "roleloopname",
+        "comparison": "1",
+        "value": "\"@everyone\"",
+        "iftrue": "2",
+        "iftrueVal": "11",
+        "iffalse": "2",
+        "iffalseVal": "10",
+        "name": "Check Variable"
+    }, {
+        "storage": "1",
+        "varName": "rolelist",
+        "addType": "0",
+        "position": "",
+        "value": "tempVars(\"roleloopname\")",
+        "name": "Add Item to List"
+    }, {
+        "storage": "1",
+        "varName": "staffroles",
+        "addType": "0",
+        "position": "",
+        "value": "tempVars(\"roleloopname\")",
+        "name": "Add Item to List"
+    }]
+}
+
+===========================================[ Command ]===========================================
+{
+    "name": "!roles",
+    "permissions": "NONE",
+    "restriction": "1",
+    "actions": [{
+        "storage": "1",
+        "varName": "rolelist",
+        "name": "Create List"
+    }, {
+        "storage": "1",
+        "varName": "staffroles",
+        "name": "Create List"
+    }, {
+        "source": "1",
+        "list": "2",
+        "varName": "",
+        "tempVarName": "roleloop",
+        "type": "false",
+        "name": "Loop Through List"
+    }, {
+        "behavior": "0",
+        "interpretation": "0",
+        "code": "var tosort = tempVars(\"rolelist\")\ntosort.sort()",
+        "storage": "1",
+        "varName": "rolelistsorted",
+        "name": "Run Script"
+    }, {
+        "list": "7",
+        "varName": "rolelistsorted",
+        "start": "- ",
+        "middle": "",
+        "end": "\\n",
+        "storage": "1",
+        "varName2": "rolelisttransform",
+        "name": "Convert List to Text"
+    }, {
+        "channel": "0",
+        "varName": "",
+        "message": "**The roles you are currently allowed to choose from are:**\n${tempVars(\"rolelisttransform\")}\n**To add a role type** `+role <name> `\n**To remove a role type** `-role <name>`\n*make sure to use the case-sensitive item from above!*",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+    }]
+}
