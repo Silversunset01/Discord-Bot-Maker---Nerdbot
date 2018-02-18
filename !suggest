@@ -1,0 +1,63 @@
+{
+    "name": "!suggest",
+    "permissions": "NONE",
+    "restriction": "1",
+    "actions": [{
+        "info": "1",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "todoitem",
+        "name": "Store Command Params"
+    }, {
+        "member": "1",
+        "varName": "",
+        "info": "3",
+        "storage": "1",
+        "varName2": "auth_username",
+        "name": "Store Member Info"
+    }, {
+        "member": "1",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "auth_avatarurl",
+        "name": "Store Member Info"
+    }, {
+        "info": "1",
+        "find": "to-do",
+        "storage": "1",
+        "varName": "dest",
+        "name": "Find Channel"
+    }, {
+        "title": "",
+        "author": "",
+        "color": "#0000FF",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embed",
+        "name": "Create Embed Message"
+    }, {
+        "storage": "1",
+        "varName": "embed",
+        "fieldName": "Suggestion:",
+        "message": "${tempVars(\"todoitem\")}",
+        "inline": "1",
+        "name": "Add Embed Field"
+    }, {
+        "storage": "1",
+        "varName": "embed",
+        "message": "${tempVars(\"auth_username\")}",
+        "footerIcon": "${tempVars(\"auth_avatarurl\")}",
+        "name": "Set Embed Footer"
+    }, {
+        "storage": "1",
+        "varName": "embed",
+        "channel": "5",
+        "varName2": "dest",
+        "name": "Send Embed Message"
+    }]
+}
