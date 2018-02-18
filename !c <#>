@@ -1,1 +1,19 @@
-{"name":"!c","permissions":"NONE","restriction":"0","actions":[{"info":"0","infoIndex":"1","storage":"1","varName":"tempf","name":"Store Command Params"},{"channel":"0","varName":"","message":"${tempVars(\"tempf\")}°F = ${Math.round((tempVars(\"tempf\") - 32) / 1.8)}°C","storage":"0","varName2":"","name":"Send Message"}]}
+{
+    "name": "!c",
+    "permissions": "NONE",
+    "restriction": "0",
+    "actions": [{
+        "info": "0",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "tempf",
+        "name": "Store Command Params"
+    }, {
+        "channel": "0",
+        "varName": "",
+        "message": "${tempVars(\"tempf\")}°F = ${Math.round((tempVars(\"tempf\") - 32) / 1.8)}°C",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+    }]
+}
