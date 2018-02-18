@@ -17,3 +17,5 @@ Unmodded | [+role <name>](https://github.com/Silversunset01/Discord-Bot-Maker---
 Unmodded | [-role <name>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/-role%20%3Cname%3E) | Allows the user to self-remove a role
 Unmodded | [.clearchannel](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/.clearchannel) | Allows a user with admin permissions to clear any channel where the bot has the "manage messages" role
 Mods | [!mcstatus](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/!mcstatus)|Displays players online for nerd servers
+Mods | [.nh <name>](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/.nh)|Searches an active Minecraft username and returns their list of previous name changes
+Mods | [!mojang](https://github.com/Silversunset01/Discord-Bot-Maker---Nerdbot/blob/master/!mojang)|Pings the minecraft services API and returns whether services are running or in error (mirroring https://help.mojang.com/)
