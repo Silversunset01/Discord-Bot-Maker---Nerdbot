@@ -1,5 +1,267 @@
-Event code: 
-{"name":"mcstatusevent","permissions":"ADMINISTRATOR","restriction":"1","actions":[{"behavior":"0","interpretation":"1","code":"new Date().getTime();\n","storage":"2","varName":"mcstatus_querytime","name":"Run Script"},{"behavior":"0","token":"","user":"","pass":"","url":"https://api.mcsrvstat.us/1/p.nerd.nu","path":"","storage":"2","varName":"api_pve","name":"Store Json From WebAPI"},{"behavior":"0","token":"","user":"","pass":"","url":"https://api.mcsrvstat.us/1/c.nerd.nu","path":"","storage":"2","varName":"api_creative","name":"Store Json From WebAPI"},{"behavior":"0","token":"","user":"","pass":"","url":"https://api.mcsrvstat.us/1/m.nerd.nu","path":"","storage":"2","varName":"api_minigames","name":"Store Json From WebAPI"},{"behavior":"0","token":"","user":"","pass":"","url":"https://api.mcsrvstat.us/1/e.nerd.nu","path":"","storage":"2","varName":"api_event","name":"Store Json From WebAPI"},{"behavior":"0","token":"","user":"","pass":"","url":"https://api.mcsrvstat.us/1/lobby.nerd.nu","path":"","storage":"2","varName":"api_lobby","name":"Store Json From WebAPI"},{"behavior":"0","jsonObjectVarName":"api_pve","path":"players.online","storage":"2","varName":"pve_online","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_pve","path":"players.max","storage":"2","varName":"pve_playersmax","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_pve","path":"players.online","storage":"2","varName":"pve_playersnow","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_creative","path":"players.online","storage":"2","varName":"c_online","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_creative","path":"players.max","storage":"2","varName":"c_playersmax","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_creative","path":"players.online","storage":"2","varName":"c_playersnow","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_minigames","path":"players.online","storage":"2","varName":"m_online","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_minigames","path":"players.max","storage":"2","varName":"m_playersmax","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_minigames","path":"players.online","storage":"2","varName":"m_playersnow","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_event","path":"online","storage":"2","varName":"e_online","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_event","path":"players.max","storage":"2","varName":"e_playersmax","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_event","path":"players.online","storage":"2","varName":"e_playersnow","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_lobby","path":"online","storage":"2","varName":"lobby_online","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_lobby","path":"players.max","storage":"2","varName":"lobby_playersmax","name":"Parse From Stored Json"},{"behavior":"0","jsonObjectVarName":"api_lobby","path":"players.online","storage":"2","varName":"lobby_playersnow","name":"Parse From Stored Json"}],"event-type":"3","temp":"60"}
+============================================[ Event code ]============================================
+{
+    "name": "mcstatusevent",
+    "permissions": "ADMINISTRATOR",
+    "restriction": "1",
+    "actions": [{
+        "behavior": "0",
+        "interpretation": "1",
+        "code": "new Date().getTime();\n",
+        "storage": "2",
+        "varName": "mcstatus_querytime",
+        "name": "Run Script"
+    }, {
+        "behavior": "0",
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://api.mcsrvstat.us/1/<yourserverhere>",
+        "path": "",
+        "storage": "2",
+        "varName": "api_server1",
+        "name": "Store Json From WebAPI"
+    }, {
+        "behavior": "0",
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://api.mcsrvstat.us/1/<yourserverhere>",
+        "path": "",
+        "storage": "2",
+        "varName": "api_server2",
+        "name": "Store Json From WebAPI"
+    }, {
+        "behavior": "0",
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://api.mcsrvstat.us/1/<yourserverhere>",
+        "path": "",
+        "storage": "2",
+        "varName": "api_server3",
+        "name": "Store Json From WebAPI"
+    }, {
+        "behavior": "0",
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://api.mcsrvstat.us/1/<yourserverhere>",
+        "path": "",
+        "storage": "2",
+        "varName": "api_server4",
+        "name": "Store Json From WebAPI"
+    }, {
+        "behavior": "0",
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://api.mcsrvstat.us/1/<yourserverhere>",
+        "path": "",
+        "storage": "2",
+        "varName": "api_server5",
+        "name": "Store Json From WebAPI"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server1",
+        "path": "players.online",
+        "storage": "2",
+        "varName": "server1_online",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server1",
+        "path": "players.max",
+        "storage": "2",
+        "varName": "server1_playersmax",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server1",
+        "path": "players.online",
+        "storage": "2",
+        "varName": "server1_playersnow",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server2",
+        "path": "players.online",
+        "storage": "2",
+        "varName": "server2_online",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server2",
+        "path": "players.max",
+        "storage": "2",
+        "varName": "server2_playersmax",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server2",
+        "path": "players.online",
+        "storage": "2",
+        "varName": "server2_playersnow",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server3",
+        "path": "players.online",
+        "storage": "2",
+        "varName": "server3_online",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server3",
+        "path": "players.max",
+        "storage": "2",
+        "varName": "server3_playersmax",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server3",
+        "path": "players.online",
+        "storage": "2",
+        "varName": "server3_playersnow",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server4",
+        "path": "online",
+        "storage": "2",
+        "varName": "server4_online",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server4",
+        "path": "players.max",
+        "storage": "2",
+        "varName": "server4_playersmax",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server4",
+        "path": "players.online",
+        "storage": "2",
+        "varName": "server4_playersnow",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server5",
+        "path": "online",
+        "storage": "2",
+        "varName": "server5_online",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server5",
+        "path": "players.max",
+        "storage": "2",
+        "varName": "server5_playersmax",
+        "name": "Parse From Stored Json"
+    }, {
+        "behavior": "0",
+        "jsonObjectVarName": "api_server5",
+        "path": "players.online",
+        "storage": "2",
+        "varName": "server5_playersnow",
+        "name": "Parse From Stored Json"
+    }],
+    "event-type": "3",
+    "temp": "60"
+}
 
-Command code:
-{"name":"!mcstatus","permissions":"NONE","restriction":"0","actions":[{"server":"0","varName":"","storage":"1","varName2":"bot_member","name":"Get Bot as Member"},{"behavior":"0","interpretation":"1","code":"new Date().getTime()\n","storage":"1","varName":"mcstatus_currenttime","name":"Run Script"},{"member":"2","varName":"bot_member","info":"16","storage":"1","varName2":"bot_avatar","name":"Store Member Info"},{"member":"2","varName":"bot_member","info":"3","storage":"1","varName2":"bot_name","name":"Store Member Info"},{"member":"2","varName":"bot_member","info":"4","storage":"1","varName2":"bot_color","name":"Store Member Info"},{"member":"1","varName":"","info":"16","storage":"1","varName2":"author_avatar","name":"Store Member Info"},{"member":"1","varName":"","info":"3","storage":"1","varName2":"author_name","name":"Store Member Info"},{"title":"","author":"${tempVars(\"bot_name\")} | !mcstatus","color":"${tempVars(\"bot_color\")}","timestamp":"true","url":"","authorIcon":"${tempVars(\"bot_avatar\")}","imageUrl":"","thumbUrl":"","storage":"1","varName":"mcstatusmsg","name":"Create Embed Message"},{"storage":"1","varName":"mcstatusmsg","fieldName":"Last tested:","message":" ${Math.round((tempVars(\"mcstatus_currenttime\") - serverVars(\"mcstatus_querytime\")) / 1000,0)} seconds ago","inline":"1","name":"Add Embed Field"},{"storage":"1","varName":"mcstatusmsg","fieldName":"Nerd.nu server status query:","message":"PvE: **${(serverVars(\"pve_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"pve_playersnow\")}** of ${serverVars(\"pve_playersmax\")}\nCreative: **${(serverVars(\"c_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"c_playersnow\")}** of ${serverVars(\"c_playersmax\")}\nMinigames: **${(serverVars(\"m_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"m_playersnow\")}** of ${serverVars(\"m_playersmax\")}\nEvent: **Offline** - Players: **0** of ${serverVars(\"e_playersmax\")}\nLobby: **${(serverVars(\"lobby_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"lobby_playersnow\")}** of ${serverVars(\"lobby_playersmax\")}","inline":"1","name":"Add Embed Field"},{"storage":"1","varName":"mcstatusmsg","message":"${tempVars(\"author_name\")} ","footerIcon":"${tempVars(\"author_avatar\")}","name":"Set Embed Footer"},{"storage":"1","varName":"mcstatusmsg","channel":"0","varName2":"","name":"Send Embed Message"}]}
+
+
+============================================[ Command code ]============================================
+{
+    "name": "!mcstatus",
+    "permissions": "NONE",
+    "restriction": "0",
+    "actions": [{
+        "server": "0",
+        "varName": "",
+        "storage": "1",
+        "varName2": "bot_member",
+        "name": "Get Bot as Member"
+    }, {
+        "behavior": "0",
+        "interpretation": "1",
+        "code": "new Date().getTime()\n",
+        "storage": "1",
+        "varName": "mcstatus_currenttime",
+        "name": "Run Script"
+    }, {
+        "member": "2",
+        "varName": "bot_member",
+        "info": "16",
+        "storage": "1",
+        "varName2": "bot_avatar",
+        "name": "Store Member Info"
+    }, {
+        "member": "2",
+        "varName": "bot_member",
+        "info": "3",
+        "storage": "1",
+        "varName2": "bot_name",
+        "name": "Store Member Info"
+    }, {
+        "member": "2",
+        "varName": "bot_member",
+        "info": "4",
+        "storage": "1",
+        "varName2": "bot_color",
+        "name": "Store Member Info"
+    }, {
+        "member": "1",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "author_avatar",
+        "name": "Store Member Info"
+    }, {
+        "member": "1",
+        "varName": "",
+        "info": "3",
+        "storage": "1",
+        "varName2": "author_name",
+        "name": "Store Member Info"
+    }, {
+        "title": "",
+        "author": "${tempVars(\"bot_name\")} | !mcstatus",
+        "color": "${tempVars(\"bot_color\")}",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "${tempVars(\"bot_avatar\")}",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "name": "Create Embed Message"
+    }, {
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "fieldName": "Nerd.nu server status query:",
+        "message": "Server1: **${(serverVars(\"server1_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server1_playersnow\")}** of ${serverVars(\"server1_playersmax\")}\nServer2: **${(serverVars(\"server2_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server2_playersnow\")}** of ${serverVars(\"server2_playersmax\")}\nServer3: **${(serverVars(\"server3_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server3_playersnow\")}** of ${serverVars(\"server3_playersmax\")}\nServer4: **${(serverVars(\"server4_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server4_playersnow\")}** of ${serverVars(\"server4_playersmax\")}\nServer5: **${(serverVars(\"server5_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server5_playersnow\")}** of ${serverVars(\"server5_playersmax\")}\n",
+        "inline": "1",
+        "name": "Add Embed Field"
+    }, {
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "fieldName": "Last tested:",
+        "message": " ${Math.round((tempVars(\"mcstatus_currenttime\") - serverVars(\"mcstatus_querytime\")) / 1000,0)} seconds ago\n\n*For more information type `!mcstatus pve` or `!mcstatus creative`*",
+        "inline": "1",
+        "name": "Add Embed Field"
+    }, {
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "message": "${tempVars(\"author_name\")} ",
+        "footerIcon": "${tempVars(\"author_avatar\")}",
+        "name": "Set Embed Footer"
+    }, {
+        "storage": "1",
+        "varName": "mcstatusmsg",
+        "channel": "0",
+        "varName2": "",
+        "name": "Send Embed Message"
+    }]
+}
