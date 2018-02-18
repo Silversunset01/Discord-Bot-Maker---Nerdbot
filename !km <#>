@@ -1,1 +1,19 @@
-{"name":"!km","permissions":"NONE","restriction":"0","actions":[{"info":"0","infoIndex":"1","storage":"1","varName":"miles","name":"Store Command Params"},{"channel":"0","varName":"","message":"${tempVars(\"miles\")}miles = ${Math.round(tempVars(\"miles\") * 1.6)}km","storage":"0","varName2":"","name":"Send Message"}]}
+{
+    "name": "!km",
+    "permissions": "NONE",
+    "restriction": "0",
+    "actions": [{
+        "info": "0",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "miles",
+        "name": "Store Command Params"
+    }, {
+        "channel": "0",
+        "varName": "",
+        "message": "${tempVars(\"miles\")}miles = ${Math.round(tempVars(\"miles\") * 1.6)}km",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+    }]
+}
