@@ -5,7 +5,7 @@ Usage | Script
 :- |:-
 the bot as client (user) | `${this.getDBM().Bot.bot` 
 the command message | `${msg`
-the current server | `${msg.guild`
+the current server (where 'this message' was sent) | `${msg.guild`
 
 ## Javascript Magic
 Usage | Script
@@ -73,6 +73,7 @@ Return Server Count of Voice Channels | `${msg.guild.channels.findAll('type', 'v
 Return Server AFK Channel | `${msg.guild.afkChannel}`
 Return Server AFK Timeout (in seconds) | `${msg.guild.afkTimeout}`
 Return Count of Members in all Bot Guilds | `${this.getDBM().Bot.bot.users.array().length}`
-Return Count all Bot Guilds | `${this.getDBM().Bot.bot.guild.array().length}`
+Return Count all Bot Guilds | `${this.getDBM().Bot.bot.guilds.array().length}`
+Return List all Bot Guilds | `${this.getDBM().Bot.bot.guilds.array()}`
 
 
