@@ -75,5 +75,5 @@ Return Server AFK Timeout (in seconds) | `${msg.guild.afkTimeout}`
 Return Count of Members in all Bot Guilds | `${this.getDBM().Bot.bot.users.array().length}`
 Return Count all Bot Guilds | `${this.getDBM().Bot.bot.guilds.array().length}`
 Return List all Bot Guilds | `${this.getDBM().Bot.bot.guilds.array()}`
-
+Program memory usage (in MB) | `${Math.floor((process.memoryUsage().heapUsed / 1024)/1024)}`
 
