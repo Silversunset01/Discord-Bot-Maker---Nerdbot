@@ -39,7 +39,8 @@ Count items in the specified list | `.array().length}`
 Usage | Script
 :- | :-    
 Find Emoji | `client.emojis.find("name", "NameOfTheEmoji")`
-Add reaction to message | `msg.react("👎")`
+Add reactions to message (embed) | `msg.channel.send(tempVars("e"))` <br/> `.then(function (message) {` <br/> `message.react("👍")` <br/> `message.react("👎")` <br/> `}).catch(function() {` <br/> `msg.channel.send("is broke yo")` <br/> `});`
+Add reactions to message (normal) | `msg.channel.send("your text here"` <br/> `.then(function (message) {` <br/> `message.react("👍")` <br/> `message.react("👎")` <br/> `}).catch(function() {` <br/> `msg.channel.send("is broke yo")` <br/> `});`
 
 ## Miscellaneous
 Usage | Script
